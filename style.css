@@ -13,6 +13,28 @@ body h1,
   display: none;
 }
 
+body h2 {
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  max-width: 1290px;
+  margin: 60px auto 20px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.paragraph {
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  max-width: 1290px;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 500;
+}
+
 .main_img {
   display: block;
   margin: 0 auto 15px;
@@ -28,13 +50,13 @@ body h1,
   grid-template-columns: repeat(auto-fill, 200px);
   gap: 15px;
   justify-content: center;
+  width: 100%;
   max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin: 18px auto;
 }
 
 .menu a {
-  display: inline-block;
+  display: block;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   text-align: center;
@@ -45,14 +67,77 @@ body h1,
   font-size: 16px;
   font-weight: 500;
   background: transparent;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 
 .menu a:hover {
   color: #fff;
   border-color: #ff6700;
   background-color: #FF6700;
-  transition: 0.5s;
+  box-shadow: 0 0 18px rgba(255, 103, 0, 0.6);
+  transition: 0.7s;
+}
+
+/*Кнопка зарегистрировать покупку*/
+.main-button {
+  display: inline-block;
+  background-color: #ff6700;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 18px 40px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: none;
+}
+
+/* Наведение — добавляем glow */
+.main-button:hover {
+  background-color: #e95c00;
+  box-shadow: 0 0 18px rgba(255, 103, 0, 0.6);
+  transition: 0.7s;
+}
+
+/* Центрирование блока с кнопкой */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Галерея призов*/
+.prize-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 0px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.prize-gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  will-change: transform;
+}
+
+.prize-gallery img:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+}
+
+.prize-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /*Меню категорий*/
@@ -114,28 +199,6 @@ body h1,
 .nav_title a:hover {
   color: #fff;
   transition: 0.5s;
-}
-
-body h2 {
-  padding: 10px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 45px;
-  text-align: center;
-  max-width: 1290px;
-  margin: 60px auto 20px;
-  color: #ff6700;
-  font-weight: 600;
-}
-
-.paragraph {
-  padding: 10px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  text-align: left;
-  max-width: 1290px;
-  margin: 0 auto;
-  color: #fff;
-  font-weight: 500;
 }
 
 .coupon_info {
