@@ -277,12 +277,12 @@ body h2 {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style: none;
-  width: 800px;
+  width: 1300px;
   margin: 0 auto;
   padding: 0;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 20px;
   font-weight: 400;
   text-align: center;
@@ -294,35 +294,33 @@ body h2 {
   align-items: center;
   background: #fff;
   overflow: hidden;
-  border-radius: 10px 15px;
-  width: 48%;
+  border-radius: 20px;
+  margin: 10px;
+  width: 22%;
 }
 
 .nav_title div:hover {
   background: #ff6700;
   color: #fff;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 .nav_title a {
-  display: block;
   text-decoration: none;
   user-select: none;
   box-sizing: border-box;
   cursor: pointer;
   color: #000;
-  font-weight: 700;
-  padding: 15px 30px;
-  transition: 0.3s;
-  width: 100%;
-  height: 100%;
+  font-weight: 600;
+  padding: 25px 5px;
+  transition: 0.7s;
   /*border: 2px solid #41108E;*/
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .nav_title a:hover {
   color: #fff;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 .coupon_info {
@@ -336,6 +334,67 @@ body h2 {
   margin: 0 auto 10px;
   color: #000;
   font-weight: 500;
+}
+
+/*Скрытие товаров*/
+
+/* Скрываем чекбокс */
+.toggle-more-checkbox {
+  display: none;
+}
+
+/* Скрываем все карточки */
+.cards .card {
+  display: none;
+}
+
+/* Показываем только первые 8 */
+.cards .card:nth-child(-n+8) {
+  display: flex;
+}
+
+/* При включенном чекбоксе — показываем все карточки */
+.toggle-more-checkbox:checked~.cards .card {
+  display: flex;
+}
+
+/* Стили кнопки */
+.show-more-label {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  background-color: #ff6700;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.show-more-label:hover {
+  background-color: #ff6700;
+}
+
+/* Текст кнопки */
+.show-more-label::after {
+  content: "Показать больше";
+}
+
+.toggle-more-checkbox:checked+.cards+.show-more-label::after {
+  content: "Скрыть";
+}
+
+@media (max-width: 768px) {
+  .cards .card {
+    display: none;
+  }
+
+  .cards .card:nth-child(-n+4) {
+    display: flex;
+  }
 }
 
 .cards {
