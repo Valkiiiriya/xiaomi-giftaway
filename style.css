@@ -873,6 +873,11 @@ body h2 {
   transform: scale(1.1);
 }
 
+.scroll-to-button:focus {
+  box-shadow: 0 0 0 3px rgba(255, 103, 0, 0.3);
+  outline: none;
+}
+
 /*Мобильная адаптация элементов*/
 @media screen and (min-width: 1300px) {
   .container {
