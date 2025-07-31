@@ -725,6 +725,67 @@ body h2 {
   transition: 0.5s;
 }
 
+/*Скрытие товаров*/
+
+/* Скрываем чекбокс */
+.toggle-more-checkbox {
+  display: none;
+}
+
+/* Скрываем все карточки */
+.cards .card {
+  display: none;
+}
+
+/* Показываем только первые 8 */
+.cards .card:nth-child(-n+8) {
+  display: flex;
+}
+
+/* При включенном чекбоксе — показываем все карточки */
+.toggle-more-checkbox:checked~.cards .card {
+  display: flex;
+}
+
+/* Стили кнопки */
+.show-more-label {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  background-color: #ff6700;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.show-more-label:hover {
+  background-color: #ff6700;
+}
+
+/* Текст кнопки */
+.show-more-label::after {
+  content: "Показать больше";
+}
+
+.toggle-more-checkbox:checked+.cards+.show-more-label::after {
+  content: "Скрыть";
+}
+
+@media (max-width: 768px) {
+  .cards .card {
+    display: none!important;
+  }
+
+  .cards .card:nth-child(-n+4) {
+    display: flex!important;
+  }
+}
+
 /*Кнопка on top*/
 .scroll-top-button {
   position: fixed;
