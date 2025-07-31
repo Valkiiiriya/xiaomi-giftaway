@@ -387,16 +387,6 @@ body h2 {
   content: "Скрыть";
 }
 
-@media (max-width: 768px) {
-  .cards .card {
-    display: none;
-  }
-
-  .cards .card:nth-child(-n+4) {
-    display: flex;
-  }
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -776,16 +766,6 @@ body h2 {
   content: "Скрыть";
 }
 
-@media (max-width: 768px) {
-  .cards .card {
-    display: none!important;
-  }
-
-  .cards .card:nth-child(-n+4) {
-    display: flex!important;
-  }
-}
-
 /*Кнопка on top*/
 .scroll-top-button {
   position: fixed;
@@ -1163,6 +1143,16 @@ body h2 {
     padding: 15px 10px;
   }
     
+}
+
+@media (max-width: 768px) {
+  .cards .card {
+    display: none;
+  }
+
+  .cards .card:nth-child(-n+4) {
+    display: flex;
+  }
 }
 
 .mi_color {
