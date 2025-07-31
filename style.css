@@ -866,16 +866,12 @@ body h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
   z-index: 999;
+  outline: none;
 }
 
 .scroll-top-button:hover {
   background-color: #e95c00;
   transform: scale(1.1);
-}
-
-.scroll-to-button:focus {
-  box-shadow: 0 0 0 3px rgba(255, 103, 0, 0.3);
-  outline: none;
 }
 
 /*Мобильная адаптация элементов*/
