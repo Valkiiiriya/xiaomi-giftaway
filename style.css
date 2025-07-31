@@ -354,7 +354,13 @@ body h2 {
 }
 
 /* При включенном чекбоксе — показываем все карточки */
-.toggle-more-checkbox:checked~.cards .card {
+#toggle-tv:checked~.tv-cards .card,
+#toggle-vacuum:checked~.vacuum-cards .card,
+#toggle-kitchen:checked~.kitchen-cards .card,
+#toggle-beauty:checked~.beauty-cards .card,
+#toggle-smart:checked~.smart-cards .card,
+#toggle-wear:checked~.wear-cards .card,
+#toggle-phone:checked~.phone-cards .card {
   display: flex;
 }
 
@@ -383,7 +389,14 @@ body h2 {
   content: "Показать больше";
 }
 
-.toggle-more-checkbox:checked+.cards+.show-more-label::after {
+/* При активном чекбоксе — меняем текст */
+#toggle-tv:checked~.show-more-label::after,
+#toggle-vacuum:checked~.show-more-label::after,
+#toggle-kitchen:checked~.show-more-label::after,
+#toggle-beauty:checked~.show-more-label::after,
+#toggle-smart:checked~.show-more-label::after,
+#toggle-wear:checked~.show-more-label::after,
+#toggle-phone:checked~.show-more-label::after {
   content: "Скрыть";
 }
 
@@ -406,8 +419,8 @@ body h2 {
   margin: 0 auto;
 }
 
-
 .card {
+  display: flex;
   font-family: 'Montserrat', sans-serif;
   width: 315px;
   min-height: 350px;
@@ -418,10 +431,6 @@ body h2 {
   border-radius: 15px;
   transition: 0.2s;
   position: relative;
-}
-
-.cards .card {
-  display: flex;
 }
 
 .img_background_1 {
@@ -1154,14 +1163,4 @@ body h2 {
 
 .xff_color {
   color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .cards .card {
-    display: none;
-  }
-
-  .cards .card:nth-child(-n+4) {
-    display: flex;
-  }
 }
