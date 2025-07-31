@@ -6,6 +6,7 @@ body {
   background-position-y: bottom;
   background-repeat: no-repeat;*/
   background-color: #181818;
+  scroll-behavior: smooth;
 }
 
 body h1,
@@ -138,6 +139,129 @@ body h2 {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+/*Правила розыгрыша*/
+.rules-block {
+  background: #fff;
+  padding: 30px 0px;
+  border-radius: 25px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rules-title {
+  color: #ff6700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0px auto 30px;
+  max-width: 1300px;
+}
+
+.rules-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.rule-step {
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.rule-circle {
+  background-color: #ff6700;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rule-text {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+  max-width: 250px;
+  text-align: left;
+  margin: 0px 10px;
+}
+
+.rule-line {
+  width: 100px;
+  height: 2px;
+  background-color: #ff6700;
+  margin: 25px 10px;
+}
+
+/* Кнопка */
+.rules-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 40px;
+  border: 2px solid #ff6700;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.7s ease;
+}
+
+.rules-button:hover {
+  background-color: #ff6700;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(255, 103, 0, 0.6);
+  transition: 0.7s;
+}
+
+/*Мобильная адаптация блока правил*/
+@media screen and (max-width: 768px) {
+  .rules-steps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .rule-step {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .rule-circle {
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  .rule-line {
+    display: none;
+  }
+
+  .rules-button {
+    display: block;
+    margin: 30px 12px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px){
+  .rule-line {
+    width: 30px;
+    }
 }
 
 /*Меню категорий*/
@@ -542,6 +666,32 @@ body h2 {
   transition: 0.5s;
 }
 
+/*Кнопка on top*/
+.scroll-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background-color: #ff6700;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 999;
+}
+
+.scroll-top-button:hover {
+  background-color: #e95c00;
+  transform: scale(1.1);
+}
+
+/*Мобильная адаптация элементов*/
 @media screen and (min-width: 1300px) {
   .container {
     padding: 5px;
