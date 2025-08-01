@@ -2979,6 +2979,15 @@
       </p>-->
   <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
 
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link =>
+      link.addEventListener('click', () => {
+        document.getElementById('burger-toggle').checked = false;
+      })
+    );
+  </script>
+
 </body>
 
 </html>
