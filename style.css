@@ -227,6 +227,7 @@ body h2 {
   background-color: #e95c00;
   box-shadow: 0 0 18px rgba(255, 103, 0, 0.6);
   transition: 0.7s;
+  color: #fff !important;
 }
 
 /* Центрирование блока с кнопкой */
