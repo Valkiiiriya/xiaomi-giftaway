@@ -21,7 +21,7 @@
 
   <!-- Мобильное меню с бургером -->
   <input type="checkbox" id="burger-toggle" />
-  <label class="burger-label" for="burger-toggle"><span></span></label>
+  <label class="burger-label" for="burger-toggle"></label>
   <nav class="mobile-menu">
     <a href="#top">Главная</a>
     <a href="#big-prize">Призы</a>
@@ -31,10 +31,14 @@
     <a href="#faq">Вопрос-ответ</a>
   </nav>
 
-  <img alt="xiaomi" src="https://mi.by/upload/iblock/1c3/yqea89najt33pnti4a3qoburs866wiam.png" class="main_img">
+  <img alt="xiaomi" src="https://mi.by/upload/iblock/ed8/0naq57gdtj4yqx3jpltvftw7aqryg7r2.png" class="main_img">
 
   <a id="big-prize" name="big-prize"></a>
-  <h2>Главный приз — <span style="color:#ff6700; text-decoration:underline;">квартира</span> в Минске</h2>
+  <h2>Главный приз — квартира в Минске</h2>
+  <p class="paragraph paragraph_more">
+    Квартира по адресу: г. Минск, ул. Маршала Лосика д. 53, кв. 8 <br>
+    Общая площадь 43.5 м²
+  </p>
   <img alt="xiaomi" src="https://mi.by/upload/medialibrary/848/fvcl2ptxr0mis8b02rv338010rxgqdiy.png" class="main_img">
 
   <div class="button-wrapper">
@@ -44,7 +48,7 @@
   <h2>Дополнительные призы</h2>
   <div class="prize-wrapper">
     <div class="prize-gallery">
-      <img src="https://mi.by/upload/medialibrary/9dd/1g0q0kga8xdgp0042ptz7iest5d20a77.png" alt="Телевизор" />
+      <img src="https://mi.by/upload/medialibrary/ddd/h1u1cgs4tsr1hcinp0o0gmkwk0ie4s1e.png" alt="Телевизор" />
       <img src="https://mi.by/upload/medialibrary/14f/sdcclzb20i0xexusg52h1orym03kbpaq.png" alt="Робот-пылесос X20" />
       <img src="https://mi.by/upload/medialibrary/c0b/pqkf5t4cz7knu0w981kco6pnpkj5kteu.png" alt="Робот-пылесос S20" />
       <img src="https://mi.by/upload/medialibrary/76f/hyjajye7q2d4m5fvp8khdxizbytee1os.png" alt="Пылесос G20 Lite" />
@@ -2927,12 +2931,8 @@
       <input type="checkbox" id="faq1" hidden>
       <label for="faq1" class="faq-question">
         Где можно купить товары?
-        <span class="faq-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </span>
+        <div class="faq-icon">
+        </div>
       </label>
 
       <div class="faq-answer">
@@ -2948,12 +2948,7 @@
     <div class="faq-item">
       <input type="checkbox" id="faq2" hidden>
       <label for="faq2" class="faq-question">Кто может принимать участие в рекламной игре?
-        <span class="faq-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </span>
+        <div class="faq-icon"></div>
       </label>
       <div class="faq-answer">
         <p>Любой гражданин РБ, достигший 18 лет...</p>
@@ -2977,8 +2972,9 @@
         Ознакомиться с полными условиями акции можно по <a href="/upload/docs/Правила_XFF_4-7.04.2025.pdf"
           class="mi_color"><b>ссылке</b></a>.
       </p>-->
-  <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
 
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="scroll-top-button"
+    aria-label="Наверх">↑</button>
 
   <script>
     document.querySelectorAll('nav a').forEach(link =>
