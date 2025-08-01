@@ -157,7 +157,23 @@ body h2 {
 }
 
 .mobile-menu {
-  display: none;
+  /*display: none;*/
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  transform: translateY(-10px);
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #181818;
+  z-index: 1000;
+  padding-top: 100px;
+  gap: 20px;
+  align-items: center;
 }
 
 #burger-toggle:checked ~ .mobile-menu {
@@ -173,6 +189,10 @@ body h2 {
   padding-top: 100px;
   gap: 20px;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .mobile-menu a {
@@ -195,6 +215,13 @@ body h2 {
 }
 
 @media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+
   .burger-label {
     display: flex;
   }
