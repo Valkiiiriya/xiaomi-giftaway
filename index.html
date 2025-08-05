@@ -123,7 +123,7 @@
   <a id="tv-monitors" name="tv-monitors"></a>
   <h2>Телевизоры и мониторы</h2>
   <div class="category">
-    <input type="checkbox" id="toggle-tv" class="toggle-more-checkbox">
+    <input type="checkbox" id="toggle-tv-monitors" class="toggle-more-checkbox">
     <div class="cards tv-cards">
       <!-- Карточка товара 1-->
       <div class="card">
@@ -2065,7 +2065,7 @@
         </div>
       </div>
     </div>
-    <label for="toggle-tv" class="show-more-label"></label>
+    <label for="toggle-tv-monitors" class="show-more-label"></label>
   </div>
   <a id="vacuum" name="vacuum"></a>
   <h2>Пылесосы</h2>
@@ -3301,7 +3301,7 @@
   <a id="beauty-health" name="beauty-health"></a>
   <h2>Техника для красоты и здоровья</h2>
   <div class="category">
-    <input type="checkbox" id="toggle-beauty" class="toggle-more-checkbox">
+    <input type="checkbox" id="toggle-beauty-health" class="toggle-more-checkbox">
     <div class="cards beauty-cards">
       <!-- Карточка товара 1-->
       <div class="card">
@@ -3743,13 +3743,13 @@
       </div>
 
     </div>
-    <label for="toggle-beauty" class="show-more-label"></label>
+    <label for="toggle-beauty-health" class="show-more-label"></label>
   </div>
   <br>
   <a id="smart-home" name="smart-home"></a>
   <h2>Умная техника</h2>
   <div class="category">
-    <input type="checkbox" id="toggle-smart" class="toggle-more-checkbox">
+    <input type="checkbox" id="toggle-smart-home" class="toggle-more-checkbox">
     <div class="cards smart-cards">
       <!-- Карточка товара 1-->
       <div class="card">
@@ -4191,13 +4191,13 @@
       </div>
 
     </div>
-    <label for="toggle-smart" class="show-more-label"></label>
+    <label for="toggle-smart-home" class="show-more-label"></label>
   </div>
   <br>
   <a id="wearables" name="wearables"></a>
   <h2>Носимые устройства</h2>
   <div class="category">
-    <input type="checkbox" id="toggle-wear" class="toggle-more-checkbox">
+    <input type="checkbox" id="toggle-wearables" class="toggle-more-checkbox">
     <div class="cards wear-cards">
       <!-- Карточка товара 1-->
       <div class="card">
@@ -4639,12 +4639,12 @@
       </div>
 
     </div>
-    <label for="toggle-wear" class="show-more-label"></label>
+    <label for="toggle-wearables" class="show-more-label"></label>
   </div>
   <a id="phones-tablets" name="phones-tablets"></a>
   <h2>Смартфоны и планшеты</h2>
   <div class="category">
-    <input type="checkbox" id="toggle-phone" class="toggle-more-checkbox">
+    <input type="checkbox" id="toggle-phones-tablets" class="toggle-more-checkbox">
     <div class="cards phone-cards">
       <!-- Карточка товара 1-->
       <div class="card">
@@ -5086,7 +5086,7 @@
       </div>
 
     </div>
-    <label for="toggle-phone" class="show-more-label"></label>
+    <label for="toggle-phones-tablets" class="show-more-label"></label>
   </div>
 
   <a id="contest" name="contest"></a>
@@ -5155,12 +5155,32 @@
     aria-label="Наверх">↑</button>
 
   <script>
+    // Закрытие меню при клике на ссылку
     document.querySelectorAll('nav a').forEach(link =>
       link.addEventListener('click', () => {
         document.getElementById('burger-toggle').checked = false;
       })
     );
+
+    // Скролл к якорю при скрытии карточек
+    document.querySelectorAll('.show-more-label').forEach(label => {
+      label.addEventListener('click', function () {
+        const forAttr = this.getAttribute('for'); // например: toggle-vacuum
+        const checkbox = document.getElementById(forAttr);
+        const anchorId = forAttr.replace('toggle-', ''); // vacuum
+        const anchor = document.getElementById(anchorId);
+
+        // Проверяем: был открыт → закрываем → прокручиваем к якорю
+        if (checkbox.checked && anchor) {
+          // Задержка нужна, чтобы страница "успела" скрыть карточки
+          setTimeout(() => {
+            anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      });
+    });
   </script>
+
 
 </body>
 

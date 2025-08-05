@@ -487,13 +487,13 @@ body h2 {
 }
 
 /* При включенном чекбоксе — показываем все карточки */
-#toggle-tv:checked ~ .tv-cards .card,
+#toggle-tv-monitors:checked ~ .tv-cards .card,
 #toggle-vacuum:checked ~ .vacuum-cards .card,
 #toggle-kitchen:checked ~ .kitchen-cards .card,
-#toggle-beauty:checked ~ .beauty-cards .card,
-#toggle-smart:checked ~ .smart-cards .card,
-#toggle-wear:checked ~ .wear-cards .card,
-#toggle-phone:checked ~ .phone-cards .card {
+#toggle-beauty-health:checked ~ .beauty-cards .card,
+#toggle-smart-home:checked ~ .smart-cards .card,
+#toggle-wearables:checked ~ .wear-cards .card,
+#toggle-phones-tablets:checked ~ .phone-cards .card {
   display: flex;
 }
 
@@ -523,13 +523,13 @@ body h2 {
 }
 
 /* При активном чекбоксе — меняем текст */
-#toggle-tv:checked ~ .show-more-label::after,
+#toggle-tv-monitors:checked ~ .show-more-label::after,
 #toggle-vacuum:checked ~ .show-more-label::after,
 #toggle-kitchen:checked ~ .show-more-label::after,
-#toggle-beauty:checked ~ .show-more-label::after,
-#toggle-smart:checked ~ .show-more-label::after,
-#toggle-wear:checked ~ .show-more-label::after,
-#toggle-phone:checked ~ .show-more-label::after {
+#toggle-beauty-health:checked ~ .show-more-label::after,
+#toggle-smart-home:checked ~ .show-more-label::after,
+#toggle-wearables:checked ~ .show-more-label::after,
+#toggle-phones-tablets:checked ~ .show-more-label::after {
   content: "Скрыть";
 }
 
