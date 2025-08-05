@@ -44,13 +44,16 @@ body h2 {
 .list {
   padding: 10px 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  text-align: left;
-  max-width: 1290px;
-  margin: 0 auto;
+  font-size: 24px;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto 40px;
   color: #fff;
   font-weight: 400;
-  margin-bottom: 40px;
+}
+
+.list p {
+  margin: 10px auto;
 }
 
 .main_img {
@@ -1058,6 +1061,10 @@ body h2 {
   .prize-gallery {
     grid-template-columns: repeat(auto-fill, 140px);
     gap: 15px;
+  }
+
+  .mob {
+    margin-bottom: 50px;
   }
 }
 
