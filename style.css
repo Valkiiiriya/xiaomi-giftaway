@@ -10,7 +10,12 @@ body {
 }
 
 body h1,
-.breadcrumbs {
+.breadcrumbs,
+footer,
+header,
+.b24-widget-button-wrapper,
+.b24-widget-button-position-bottom-right,
+.b24-widget-button-visible {
   display: none;
 }
 
@@ -63,6 +68,22 @@ body h2 {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+
+/*Вставляем логотип*/
+.site-header-logo {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+
+.site-header-logo img {
+  height: 43px;
+  width: auto;
+  display: block;
 }
 
 /*Верхнее меню для десктопа*/
@@ -506,18 +527,14 @@ body h2 {
   width: fit-content;
   margin: 30px auto 0;
   padding: 12px 24px;
-  background-color: #ff6700;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-}
-
-.show-more-label:hover {
-  background-color: #ff6700;
 }
 
 /* Текст кнопки */
@@ -900,11 +917,6 @@ body h2 {
   transition: background 0.3s ease;
 }
 
-.show-more-label:hover {
-  background-color: #ff6700;
-  color: #fff;
-}
-
 /* Текст кнопки */
 .show-more-label::after {
   content: "Показать больше";
@@ -933,7 +945,7 @@ body h2 {
   background-color: #000;
   color: #fff;
   font-weight: 600;
-  padding: 18px 24px;
+  padding: 18px 48px 18px 24px;
   cursor: pointer;
   border-left: 4px solid #ff6700;
   position: relative;
@@ -1065,6 +1077,10 @@ body h2 {
 
   .mob {
     margin-bottom: 50px;
+  }
+
+  .site-header-logo img {
+    height: 32px;
   }
 }
 
