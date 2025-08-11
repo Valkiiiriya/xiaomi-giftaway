@@ -733,7 +733,7 @@ body h2 {
 }
 
 .card_name {
-  height: 55px;
+  height: 65px;
 }
 
 .card_name_gifts {
@@ -1402,8 +1402,4 @@ body h2 {
 
 .mi_color {
   color: #ff6700;
-}
-
-.xff_color {
-  color: #fff;
 }
