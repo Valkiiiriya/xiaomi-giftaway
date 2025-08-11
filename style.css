@@ -517,6 +517,7 @@ body h2 {
 #toggle-beauty-health:checked ~ .beauty-cards .card,
 #toggle-smart-home:checked ~ .smart-cards .card,
 #toggle-wearables:checked ~ .wear-cards .card,
+#toggle-accessories:checked ~ .accessories-cards .card,
 #toggle-phones-tablets:checked ~ .phone-cards .card {
   display: flex;
 }
@@ -549,6 +550,7 @@ body h2 {
 #toggle-beauty-health:checked ~ .show-more-label::after,
 #toggle-smart-home:checked ~ .show-more-label::after,
 #toggle-wearables:checked ~ .show-more-label::after,
+#toggle-accessories:checked ~ .accessories-cards .card,
 #toggle-phones-tablets:checked ~ .show-more-label::after {
   content: "Скрыть";
 }
@@ -1048,8 +1050,9 @@ body h2 {
     font-size: 18px;
   }
 
-  .nav_title a {
-    padding: 15px 10px;
+  .nav_title div {
+    width: 40%;
+    margin: 5px;
   }
 }
 
@@ -1103,10 +1106,6 @@ body h2 {
   .nav_title div {
     width: 60%;
     margin: 5px 0;
-  }
-
-  .nav_title a {
-    padding: 15px 10px;
   }
 }
 
@@ -1213,7 +1212,6 @@ body h2 {
   .card__label {
     font-size: 14px;
     left: 15px;
-    right: 15px;
   }
 
   .card__label_credit {
@@ -1315,7 +1313,6 @@ body h2 {
   .card__label {
     font-size: 14px;
     left: 15px;
-    right: 15px;
   }
 
   .card__label_credit {
